@@ -1,0 +1,41 @@
+{
+  "name": "@inkdropapp/electron-vibrancy-gpu-fix",
+  "version": "0.1.0",
+  "description": "Reduce WindowServer GPU load of transparent Electron windows with vibrancy on macOS",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "src",
+    "prebuilds"
+  ],
+  "scripts": {
+    "build": "prebuildify --napi --strip --arch arm64+x64",
+    "test": "node --test",
+    "example": "electron example/main.js",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inkdropapp/electron-vibrancy-gpu-fix.git"
+  },
+  "keywords": [
+    "electron",
+    "macos",
+    "vibrancy",
+    "transparent",
+    "gpu"
+  ],
+  "author": "Takuya Matsuyama",
+  "license": "MIT",
+  "dependencies": {
+    "node-gyp-build": "^4.8.4"
+  },
+  "devDependencies": {
+    "electron": "^44.10.2",
+    "node-addon-api": "^8.9.2",
+    "node-gyp": "^13.1.0",
+    "prebuildify": "^6.0.1"
+  }
+}
